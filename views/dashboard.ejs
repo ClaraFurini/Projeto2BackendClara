@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+
+<div class="dashboard-container">
+  <h1>Bem-vindo, <%= user.username %>!</h1>
+  <p>Esta é sua área administrativa.</p>
+  <a href="/auth/logout" class="logout-btn">Sair</a>
+</div>
+
+<%- include('partials/footer') %>

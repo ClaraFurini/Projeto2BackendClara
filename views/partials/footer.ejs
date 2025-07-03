@@ -1,0 +1,38 @@
+    </main>
+
+    <footer style="
+        background-color: #6a0dad;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    ">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div style="margin-bottom: 1rem;">
+                    <h3 style="margin: 0; color: #fff;">Empresa Fictícia</h3>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Soluções inovadoras para seu negócio</p>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <h4 style="margin: 0 0 0.5rem; color: #fff;">Links Rápidos</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem;">
+                        <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
+                        <% if (user) { %>
+                            <li><a href="/admin/dashboard" style="color: #fff; text-decoration: none;">Dashboard</a></li>
+                        <% } else { %>
+                            <li><a href="/auth/login" style="color: #fff; text-decoration: none;">Login</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="margin: 0; font-size: 0.8rem;">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Empresa Fictícia. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

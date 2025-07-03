@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<div class="hero" style="
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(106,13,173,0.5)),
+              url('/images/hero-bg.jpg') center/cover;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+">
+  <h1><%= page.title %></h1>
+  <p style="max-width: 800px; margin: 0 auto;"><%= page.content %></p>
+</div>
+
+<section style="
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+">
+  <h2 style="color: #6a0dad;">Nossos Serviços</h2>
+  
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  ">
+    <div style="
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-top: 3px solid #6a0dad;
+    ">
+      <h3 style="color: #ba68c8;">Solução 1</h3>
+      <p>Um grande atendimento para sua localidade.</p>
+    </div>
+    
+    <div style="
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-top: 3px solid #6a0dad;
+    ">
+      <h3 style="color: #ba68c8;">Solução 2</h3>
+      <p>Muitos anhos se você contratar a gente.</p>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
