@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// Middleware para hash da senha antes de salvar
 userSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
   
@@ -46,18 +45,15 @@ userSchema.pre('save', async function(next) {
   }
 });
 
-// Middleware para atualizar o updatedAt antes de atualizações
 userSchema.pre('findOneAndUpdate', function(next) {
   this.set({ updatedAt: Date.now() });
   next();
 });
 
-// Método para comparar senhas
 userSchema.methods.comparePassword = async function(candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
-// Configurações para melhorar as queries
 userSchema.set('toJSON', {
   virtuals: true,
   transform: function(doc, ret) {

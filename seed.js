@@ -1,7 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-// Configuração do Mongoose
 mongoose.set('strictQuery', true);
 
 async function seedDatabase() {

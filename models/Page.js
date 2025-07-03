@@ -34,11 +34,9 @@ const pageSchema = new mongoose.Schema({
   }
 });
 
-// Middleware para atualizar o updatedAt
 pageSchema.pre('save', function(next) {
   this.updatedAt = Date.now();
   next();
 });
 
-// Registra o modelo corretamente
 module.exports = mongoose.models.Page || mongoose.model('Page', pageSchema);

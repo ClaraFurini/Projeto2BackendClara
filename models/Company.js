@@ -36,6 +36,5 @@ const companySchema = new mongoose.Schema({
   }
 });
 
-// Registra o modelo corretamente
 
 module.exports = mongoose.models.Company || mongoose.model('Company', companySchema);
